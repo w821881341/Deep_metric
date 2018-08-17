@@ -12,7 +12,6 @@
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 *.npy
-.vscode/*
 
 *.DS_Store
 .AppleDouble
@@ -232,3 +231,6 @@ DataSet/Products/
 pretrained*
 checkpoint*
 *.npy
+
+# No loss will update before my paper
+losses/*
