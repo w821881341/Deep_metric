@@ -14,7 +14,6 @@
 - Lifted Structure Loss
 [](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Song_Deep_Metric_Learning_CVPR_2016_paper.pdf)
 
-    wait to be done in future
 
 - Binomial BinDeviance Loss 
 
@@ -37,11 +36,11 @@
 
   first 100 classes as train set and last 100 classes as test set
 
-- [Stanford-Online](ftp://cs.stanford.edu/cs/cvgl/Stanford_Online_Products.zip)
+- [Stanford-Online-Products](ftp://cs.stanford.edu/cs/cvgl/Stanford_Online_Products.zip)
   
   for the experiments, we split 59,551 images of 11,318 classes for training and 60,502 images of 11,316 classes for testing
 
-- [In-Shop-clothes-Retrieval]
+- [In-Shop-clothes-Retrieval](ftp://cs.stanford.edu/cs/cvgl/Stanford_Online_Products.zip)
   
     For the In-Shop Clothes Retrieval dataset, 3,997 classes with 25,882 images for training.
     And the test set are partitioned to query set with 3,985 classes(14,218 images) and gallery set with 3,985 classes (12,612 images).
@@ -67,8 +66,7 @@ cp   bn_inception-239d2248.pth    pretrained_models/
 - For training, an NVIDIA GPU is strongly recommended for speed. CPU is supported but training may be slow.
 
 #### Attention!!
-The pre-trained model inception-v2 is transferred from Caffe, it can only  work normally on specific version of Pytorch or Python.
-I do not figure out why, and do not which version is best(the code can be run without bug, but the performance is bad), but if you want to get similar performance as me
+The pre-trained model inception-v2 is transferred from Caffe, it can only  work normally on specific version of Pytorch.
 Please create an env as follows:
 
 - Python 
@@ -84,7 +82,8 @@ which can work normally on pytorch 0.4.0 (the newest stable version)
 
 ## Performance of Loss:
 
-I will update this in next two weeks. 
+I will update this in next month.  The performances of different metric learning losses on the four datasets will be list below. 
+Experiment is doing now.  After all the experiments done, I will make a table here. 
 
 ### Via some data precessing, Result is much better now.
 
