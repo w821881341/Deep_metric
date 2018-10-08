@@ -80,7 +80,7 @@ which can work normally on pytorch 0.4.0 +
 
 ## Ablation study: only Recall-1 is provided
 
-| | {CUB-200}  | {Cars-196} | {SOP} | {In-shop}|
+| | CUB-200  | Cars-196 | SOP | In-shop|
 |:-:|:-:|:-:|:-:|:-:|
 |Contrastive | 64.52| 76.95|  74.81 | 86.05|
 |Binomial | 64.45 | 80.78| 73.4 | 84.78|
