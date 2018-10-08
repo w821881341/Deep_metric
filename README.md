@@ -117,12 +117,11 @@ which can work normally on pytorch 0.4.0 +
 |ABIER | 74.2 | 86.9 | 94.0 | 97.8 | 83.1 | 95.1 | 96.9 | 97.5 | 97.8 | 98.0|
 |HTL | 74.8| 88.3| 94.8| 98.4 | 80.9| 94.3| 95.8| 97.2| 97.4| 97.8 ||
 |RAW+VTHM |  78.18|  90.47|  96.0|  98.74 |89.64 |97.87|98.47|98.84 |99.05 |99.20|
-    
-### Via some data precessing, Result is much better now.
 
-## Reproducing Car-196 (or CUB-200-2011) experiments
 
-**With VTHM+RAW :**
+##### Reproducing Car-196 (or CUB-200-2011) experiments
+
+*** VTHM+RAW :***
 
 ```bash
 sh run_train_00.sh
