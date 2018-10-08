@@ -2,7 +2,7 @@
 DATA=cub
 DATA_ROOT=/opt/data/users/xunwang/DataSet
 Gallery_eq_Query=True
-LOSS=bin
+LOSS=WeightLoss
 CHECKPOINTS=/opt/data/users/xunwang/checkpoints
 R=.pth.tar
 
