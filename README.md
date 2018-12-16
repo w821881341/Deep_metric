@@ -8,7 +8,7 @@
 
 - Semi-Hard Mining Strategy [2] 
 
-- Lifted Structure Loss [3] (Modified version because of its weak performance of original lifted structure loss) 
+- Lifted Structure Loss* [3] (Modified version because of its weak performance of original lifted structure loss) 
 
 - Binomial BinDeviance Loss [4]
 
@@ -41,11 +41,15 @@
 
 ## Prerequisites
 
-- Pytorch version > 0.4 (# we give the instructions for PyTorch 1.0)
-- Computer with Linux or OSX
-- For training, an NVIDIA GPU is strongly recommended for speed. CPU is supported but training may be slow.
+
+## Requirements
+* Python >= 3.5
+* PyTorch >= 0.4 
+* tqdm (Optional for `test.py`)
+* tensorboard >= 1.7.0 (Optional for TensorboardX)
+* tensorboardX >= 1.2 (Optional for TensorboardX)
  
-### performance on CUB-200 and Cars-196
+### Comparasion with state-of-the-art on CUB-200 and Cars-196
 
 |Recall@K | 1 | 2 | 4 | 8 | 16 | 32 | 1 | 2 | 4 | 8 | 16 | 32|
  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -58,7 +62,7 @@
 |ABIER |57.5 |68.7 |78.3 |86.2 |91.9 |95.5 |82.0 |89.0 |93.2 |96.1 |97.8 |98.7|
 |Weight|  66.85|  77.84|  85.8|   91.29 |  94.94 |  97.42 |  83.69| 90.27 |  94.53|  97.16 |  98.65 |  99.36|
 
-###  performance on SOP and In-shop 
+###  Comparasion with state-of-the-art on SOP and In-shop 
 
 |Recall@K | 1 | 10 | 100 | 1000 | 1 | 10 | 20 | 30 | 40 | 50|
  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -68,7 +72,7 @@
 |Proxy-NCA | 73.7 | - | - | - | -| -| - | - | -| -|
 |ABIER | 74.2 | 86.9 | 94.0 | 97.8 | 83.1 | 95.1 | 96.9 | 97.5 | 97.8 | 98.0|
 |HTL | 74.8| 88.3| 94.8| 98.4 | 80.9| 94.3| 95.8| 97.2| 97.4| 97.8 ||
-|weight |  78.18|  90.47|  96.0|  98.74 |89.64 |97.87|98.47|98.84 |99.05 |99.20|
+| weight|  78.18|  90.47|  96.0|  98.74 |89.64 |97.87|98.47|98.84 |99.05 |99.20|
 
 
 ##### Reproducing Car-196 (or CUB-200-2011) experiments 
@@ -78,6 +82,14 @@
 sh run_train_00.sh
 ```
 
+## TODOs
+ 
+- [x] Use SGD to instead of Adam 
+- [x] Update the loss to PyTorch 1.0 version
+- [x] `tensorboardX` Visualization
+- [x] Evalate models during training
+- [x] Multi-GPU support
+- [x] using config file (json or yaml instead of all parameters in bash)
 
 ## References
 
