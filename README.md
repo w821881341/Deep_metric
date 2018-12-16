@@ -8,7 +8,7 @@
 
 - Semi-Hard Mining Strategy [2] 
 
-- Lifted Structure Loss* [3] (Modified version because of its weak performance of original lifted structure loss) 
+- Lifted Structure Loss* [3] (Modified version because of its original weak performance) 
 
 - Binomial BinDeviance Loss [4]
 
