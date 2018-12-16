@@ -9,20 +9,27 @@
 
 - Semi-Hard Sampling 
 
-    Sampling strategy in FaceNet
+    Sampling strategy in FaceNet 
 
-- Lifted Structure Loss
+- Lifted Structure Loss (I modify this loss because of its weak performance of original lifted structure loss)
+
+Deep Metric Learning via Lifted Structured Feature Embedding
 [](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Song_Deep_Metric_Learning_CVPR_2016_paper.pdf)
 
 - Binomial BinDeviance Loss 
 
+Deep Metric Learning for Person Re-Identification [](http://www.cbsr.ia.ac.cn/users/zlei/papers/ICPR2014/Yi-ICPR-14.pdf)
+
 - Distance Weighted Sampling
+
+Sampling Matters in Deep Embedding Learning [](http://openaccess.thecvf.com/content_ICCV_2017/papers/Wu_Sampling_Matters_in_ICCV_2017_paper.pdf)
 
 - NCA Loss
 
    Learning a Nonlinear Embedding by Preserving Class Neighbourhood Structure  -Ruslan Salakhutdinov and Geoffrey Hinton
  
  -WeightLoss 
+    My own loss (not public now)
  
 
 ## Dataset
@@ -44,38 +51,11 @@
     And the test set are partitioned to query set with 3,985 classes(14,218 images) and gallery set with 3,985 classes (12,612 images).
 
 
-## Pretrained models in Pytorch
-
-Pre-trained Inceptionn-BN(inception-v2) used in most deep metric learning papers
-
-Download site: http://data.lip6.fr/cadene/pretrainedmodels/bn_inception-239d2248.pth
-
-```bash
-wget http://data.lip6.fr/cadene/pretrainedmodels/bn_inception-239d2248.pth
-
-mkdir pretrained_models
-
-cp   bn_inception-239d2248.pth    pretrained_models/
-```
-
 ## Prerequisites
 
+- Pytorch 1.0
 - Computer with Linux or OSX
 - For training, an NVIDIA GPU is strongly recommended for speed. CPU is supported but training may be slow.
-
-#### Attention!!
-The pre-trained model inception-v2 is transferred from Caffe, it can only  work normally on specific version of Pytorch.
-Please create an env as follows:
-
-- [PyTorch](http://pytorch.org)  : (0.2.30)
-(I have tried 0.3.0 and 0.1.0,  performance is lower than 0.2.03 by 10% on rank@1)
-
-#### Another Attention!!
-If you are not required to used inception-BN, you better use my New repository is at https://github.com/bnulihaixia/VGG_dml. 
-
-Performance is nearly the same as BN-inception,  training speed is a bit faster.
-
-which can work normally on pytorch 0.4.0 +
  
 ### performance on CUB-200 and Cars-196
 
@@ -103,7 +83,7 @@ which can work normally on pytorch 0.4.0 +
 |weight |  78.18|  90.47|  96.0|  98.74 |89.64 |97.87|98.47|98.84 |99.05 |99.20|
 
 
-##### Reproducing Car-196 (or CUB-200-2011) experiments
+##### Reproducing Car-196 (or CUB-200-2011) experiments with dimension 512 
 
 *** weight :***
 
