@@ -24,9 +24,9 @@ class HardMiningLoss(nn.Module):
         # Compute similarity matrix
         sim_mat = similarity(inputs)
         # print(sim_mat)
-        targets = targets.cuda()
+        targets = targets#.cuda()
         # split the positive and negative pairs
-        eyes_ = Variable(torch.eye(n, n)).cuda()
+        eyes_ = Variable(torch.eye(n, n))#.cuda()
         # eyes_ = Variable(torch.eye(n, n))
         pos_mask = targets.expand(n, n).eq(targets.expand(n, n).t())
         neg_mask = eyes_.eq(eyes_) - pos_mask
@@ -62,7 +62,7 @@ class HardMiningLoss(nn.Module):
             neg_loss = torch.mean(neg_pair)
             loss.append(pos_loss + neg_loss)
 
-        loss = torch.sum(torch.cat(loss))/n
+        loss = torch.sum(torch.stack(loss))/n
         prec = float(c)/n
         neg_d = torch.mean(neg_sim).data[0]
         pos_d = torch.mean(pos_sim).data[0]
