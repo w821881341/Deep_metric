@@ -2,7 +2,7 @@ from .CUB200 import CUB_200_2011
 from .Car196 import Car196
 from .Products import Products
 from .In_shop_clothes import InShopClothes
-# from .transforms import *
+from .transforms import *
 import os 
 
 __factory = {
